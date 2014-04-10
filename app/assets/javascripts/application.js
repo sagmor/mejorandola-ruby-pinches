@@ -13,4 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require masonry
+//= require imagesloaded
 //= require_tree .
+
+$(function(){
+  var $container = $('#items');
+      $container.imagesLoaded(function(){
+        $container.masonry({
+          itemSelector : '.item',
+          columnWidth : 290,
+          isAnimated: true
+        });
+      });
+});

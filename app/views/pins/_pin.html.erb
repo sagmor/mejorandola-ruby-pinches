@@ -1,0 +1,25 @@
+<div class=" item masonry-brick">
+    <div class="picture">
+      <%= link_to image_tag(pin.image, width: 270), pin, title: pin.title %>
+    <div class="item-content">
+      <div class="description">
+        <%= pin.description %>
+      </div>
+      <div class="author"> - John White - </div>
+      <div class="meta">
+        <span>
+          <i class="icon-calendar"></i>
+          <%= I18n.l pin.created_at, format: :short %>
+        </span>
+        <span>
+          <i class="icon-user"></i>
+          <a href="#">John</a>
+        </span>
+        <span>
+            <i class="icon-heart-empty"></i>
+          10
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
