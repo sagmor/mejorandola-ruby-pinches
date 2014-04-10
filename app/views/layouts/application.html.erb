@@ -28,6 +28,15 @@
               <i class="glyphicon glyphicon-plus"></i>
             <% end %>
           </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="#">
+              <%= image_tag current_user.avatar, width:25, height: 25 %>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
         <% else %>
           <li><%= link_to 'Sign up', new_user_registration_path %></li>
           <li><%= link_to 'Sign in', new_user_session_path %></li>

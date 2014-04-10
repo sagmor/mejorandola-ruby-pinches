@@ -3,4 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+
+  def avatar
+    "http://www.gravatar.com/avatar/#{ Digest::MD5.hexdigest( self.email) }"
+  end
 end
