@@ -17,7 +17,8 @@
 //= require imagesloaded
 //= require_tree .
 
-$(function(){
+
+var ready = function() {
   var $container = $('#items');
       $container.imagesLoaded(function(){
         $container.masonry({
@@ -26,4 +27,7 @@ $(function(){
           isAnimated: true
         });
       });
-});
+}
+
+$(document).on('ready', ready);
+$(document).on('page:load', ready);
