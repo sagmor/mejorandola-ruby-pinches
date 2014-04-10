@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'pins#index'
   resources :pins
 
   # The priority is based upon order of creation: first created -> highest priority.
